@@ -1,0 +1,197 @@
+﻿<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <title>Municipalities from Census 2010</title>
+        <geoform>vector digital data</geoform>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>The Municipal Boundaries from Census 2010 polygon feature class was created by dissolving the Census 2010 Block data on the COUSUBFP10 (county subdivision) field. Community-based attributes such as town name, ID and population were then added. This dataset may be used as basemap data when mapping Census 2010 geography, as other municipal boundary layers from MassGIS will not line up exactly with the Census geography.</abstract>
+      <purpose>Municipal Boundaries from Census 2010 as a line feature class.</purpose>
+    </descript>
+    <spdom>
+      <bounding>
+        <westbc>-73.533245</westbc>
+        <eastbc>-69.898567</eastbc>
+        <northbc>42.888313</northbc>
+        <southbc>41.230345</southbc>
+      </bounding>
+    </spdom>
+    <keywords />
+    <accconst>None</accconst>
+    <useconst>None</useconst>
+    <datacred>MassGIS, from data from the U.S. Census Bureau</datacred>
+    <native>Microsoft Windows Server 2008 R2 Version 6.1 (Build 7600) ; ESRI ArcGIS 10.0.2.3200</native>
+  </idinfo>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>GT-polygon composed of chains</sdtstype>
+        <ptvctcnt>351</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>NAD 1983 StatePlane Massachusetts Mainland FIPS 2001</mapprojn>
+          <lambertc>
+            <stdparll>41.71666666666667</stdparll>
+            <stdparll>42.68333333333333</stdparll>
+            <longcm>-71.5</longcm>
+            <latprjo>41.0</latprjo>
+            <feast>200000.0</feast>
+            <fnorth>750000.0</fnorth>
+          </lambertc>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.0001</absres>
+            <ordres>0.0001</ordres>
+          </coordrep>
+          <plandu>Meter</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D North American 1983</horizdn>
+        <ellips>GRS 1980</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257222101</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>CENSUS2010TOWNS_POLY</enttypl>
+        <enttypd>2010 Census Block State-based</enttypd>
+        <enttypds>U.S. Census Bureau</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TOWN_ID</attrlabl>
+        <attrdef>MassGIS Town identifier (1-351)</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>TOWN</attrlabl>
+        <attrdef>MassGIS town name all capital letters</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>TOWN2</attrlabl>
+        <attrdef>Town name from Census -- same as TOWN field but with Title case</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>COUSUBFP10</attrlabl>
+        <attrdef>County subdivision ID from the U.S. Bureau</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>FIPS_STCO</attrlabl>
+        <attrdef>County code</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>COUNTY</attrlabl>
+        <attrdef>County name</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>POP1980</attrlabl>
+        <attrdef>1980 population</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>POP1990</attrlabl>
+        <attrdef>1990 population</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>POP2000</attrlabl>
+        <attrdef>2000 population</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>POP2010</attrlabl>
+        <attrdef>2010 population</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>POPCH80_90</attrlabl>
+        <attrdef>Population change from 1980-1990</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>POPCH90_00</attrlabl>
+        <attrdef>Population change from 1990-2000</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>POPCH00_10</attrlabl>
+        <attrdef>Population change from 2000-2010</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>HU2010</attrlabl>
+        <attrdef>2010 Housing Units</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>FOURCOLOR</attrlabl>
+        <attrdef>Code foe mapping/symbology so thagt no adjacent towns have the same symbol/color</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>TYPE</attrlabl>
+        <attrdef>Type of municipal government</attrdef>
+        <attrdomv>
+          <edom>
+            <edomv>T</edomv>
+            <edomvd>Town</edomvd>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>C</edomv>
+            <edomvd>City</edomvd>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>TC</edomv>
+            <edomvd>Town with city form of government</edomvd>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>AREA_ACRES</attrlabl>
+        <attrdef>Area of community in acres</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SQ_MILES</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>SHAPE.AREA</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>SHAPE.LEN</attrlabl>
+      </attr>
+    </detailed>
+    <overview>
+      <dsoverv>See http://www.census.gov/geo/www/tiger/tgrshp2010/documentation.html
+
+NOTE: THIS DATA SHOULD NOT BE USED WITH DEMOGRAPHICS DATA RELEASES FROM CENSUS 2000!</dsoverv>
+    </overview>
+  </eainfo>
+  <metainfo>
+    <metd>20120411</metd>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+  </metainfo>
+</metadata>
