@@ -1,4 +1,5 @@
-setwd("/Users/dphnrome/Documents/Git/MassElections")
+# setwd("/Users/dphnrome/Documents/Git/MassElections")
+setwd("C:/Documents and Settings/dhadley/Documents/GitHub/MassElections")
 
 d <- read.csv("./rawData/votePercents.csv")
 
@@ -42,17 +43,17 @@ ggmap(map)
 
 
 #### Automatic Maps ####
+# uncomment to use #
 
-
-for(i in 27 : 46){
-  ggmap(map) +
-    geom_polygon(data=mass.df, aes(x=long, y=lat, group=group, fill=mass.df[,i]), colour=NA, alpha=0.7) +
-    scale_fill_gradientn(colours=(brewer.pal(9,"YlGnBu")),labels=percent) +
-    labs(fill="") +
-    theme_nothing(legend=TRUE) + ggtitle(paste("Percent of Votes for ",colnames(mass.df)[[i]],sep=""))
-  
-  ggsave(paste("./plots/Map",i,".png",sep=""), dpi=300, width=6, height=5)
-}
+# for(i in 27 : 46){
+#   ggmap(map) +
+#     geom_polygon(data=mass.df, aes(x=long, y=lat, group=group, fill=mass.df[,i]), colour=NA, alpha=0.7) +
+#     scale_fill_gradientn(colours=(brewer.pal(9,"YlGnBu")),labels=percent) +
+#     labs(fill="") +
+#     theme_nothing(legend=TRUE) + ggtitle(paste("Percent of Votes for ",colnames(mass.df)[[i]],sep=""))
+#   
+#   ggsave(paste("./plots/Map",i,".png",sep=""), dpi=300, width=6, height=5)
+# }
 
 
 ####  Visualize ####
@@ -78,6 +79,13 @@ my.theme <-
     ,axis.text.x = element_text(angle=60, hjust = 1) # Uncomment if X-axis unreadable 
   )
 
+# add Mass to d
+m = as.data.frame(mass)
+d <- merge(m, d, by="TOWN")
+# new variable
+d$WhichGov <- ifelse(d$Baker > .5, "Baker",
+                     ifelse(d$Coakley > .5, "Coakley", "No Majority"))
+
 
 ggplot(d, aes(x=d$Baker)) + geom_histogram(binwidth=.03, colour="white", fill=pinkish_red) + 
   my.theme + ggtitle("Votes for Baker") + xlab("Percent of City/Town's Vote")+ylab("Number of Cities/Towns") + 
@@ -91,14 +99,6 @@ ggplot(d, aes(x=d$Coakley)) + geom_histogram(binwidth=.03, colour="white", fill=
   scale_x_continuous(labels = percent)
 
 ggsave("./plots/plot02.png", dpi=300, width=5, height=3)
-
-
-
-# ggplot(mass.df, aes(x=mass.df$Coakley, weight=mass.df$POP2010)) + geom_histogram(binwidth=.03, colour="white", fill=nice_blue) + 
-#   my.theme + ggtitle("Votes for Coakley") + xlab("Percent of City/Town's Vote")+ylab("Number of Cities/Towns") + 
-#   scale_x_continuous(labels = percent) + scale_y_continuous(labels = comma)
-# 
-# ggsave("./plots/plot04.png", dpi=300, width=5, height=3)
 
 
 mass.df.top <- mass.df[which(mass.df$POP2010 > 70000),]
@@ -127,12 +127,72 @@ ggplot(long, aes(votes, fill = Candidate)) + geom_density(alpha = 0.5, colour="w
 ggsave("./plots/plot04.png", dpi=300, width=5, height=3)
 
 
+ggplot(d, aes(x=d$Coakley, weight=d$POP2010)) + geom_histogram(binwidth=.03, colour="white", fill=nice_blue) + 
+  my.theme + ggtitle("Votes for Coakley") + xlab("Percent of City/Town's Vote")+ylab("Sum Population of Places in This Bin") + 
+  scale_x_continuous(labels = percent) + scale_y_continuous(labels = comma)
+
+ggsave("./plots/plot05.png", dpi=300, width=5, height=3)
+
+
+CitiesForBaker <- d[which(d$POP2010 > 40000 & d$Baker > .5),]
+
+ggplot(CitiesForBaker, aes(x=reorder(CitiesForBaker$TOWN, -CitiesForBaker$Baker), y=CitiesForBaker$Baker)) + geom_bar(colour="white", fill=pinkish_red) + 
+  my.theme + ggtitle("Cities for Baker: the Most Populous Places") + xlab("Cities")+ylab("Percent of City/Town's Vote for Baker") + 
+  scale_y_continuous(labels = percent)
+
+ggsave("./plots/plot06.png", dpi=300, width=5, height=3)
+
+
+ggplot(d, aes(x=POP2010, y=d$Coakley, color=WhichGov)) +
+  geom_point(shape=1) + scale_x_log10() +
+  scale_color_manual(values = c(pinkish_red, nice_blue, purple)) +
+  my.theme + ggtitle("Vote By Population") + xlab("Log Of Population")+ylab("Percent of City/Town's Vote for Coakley")
+
+ggsave("./plots/plot07.png", dpi=300, width=5, height=5)
+
+
+Baker <- d[which(d$WhichGov == "Baker"),]
+
+ggplot(Baker, aes(x=POP2010, y=Baker, color=WhichGov)) +
+  geom_point(shape=1) + scale_x_log10() +
+  scale_color_manual(values = c(pinkish_red, nice_blue, purple)) +
+  my.theme + ggtitle("Vote By Population") + xlab("Log Of Population")+ylab("Percent of City/Town's Vote for Baker")
+
+ggsave("./plots/plot08.png", dpi=300, width=5, height=5)
+
+
 #### Census + Crime + Voting Visualization ####
 # This brings in census data, which is a smaller sample, but more columns
 
 dma <- read.csv("./rawData/MassData.csv")
 
 dma$Municipality <- dma$Geography 
-d <- merge(dma, d, by="Municipality")
+dma <- merge(dma, d, by="Municipality")
+
+
+
+ggplot(dma, aes(x=percent.college.or.grad.school, y=Baker)) +
+  geom_point(shape=1, color = pinkish_red) + geom_smooth(method=lm, color = "grey") +
+  my.theme + ggtitle("Education/Baker") + xlab("Percent Currently Attending College+Grad?")+ylab("Percent of City/Town's Vote for Baker") +
+  annotate("text", x=94, y=.18, label="Amherst", size=2)
+
+ggsave("./plots/plot09.png", dpi=300, width=5, height=3)
+
+
+
+ggplot(dma, aes(x=dma$percent.bachelor.s.degree.or.higher, y=Baker, color = WhichGov)) +
+  geom_point(shape=1) + geom_smooth(method=lm, color = "grey") +
+  scale_color_manual(values = c(pinkish_red, nice_blue, purple)) +
+  my.theme + ggtitle("Education/Baker") + xlab("Percent Bachelors or Higher")+ylab("Percent of City/Town's Vote for Baker") 
+
+ggsave("./plots/plot10.png", dpi=300, width=5, height=3)
+
+
+ggplot(dma, aes(x=dma$graduate.or.professional.degree, y=Baker, color = WhichGov)) +
+  geom_point(shape=1) + geom_smooth(method=lm, color = "grey") +
+  scale_color_manual(values = c(pinkish_red, nice_blue, purple)) +
+  my.theme + ggtitle("Education/Baker") + xlab("Professional Degree or Higher")+ylab("Percent of City/Town's Vote for Baker") 
+
+ggsave("./plots/plot11.png", dpi=300, width=5, height=3)
 
 
