@@ -1,6 +1,7 @@
-setwd("c:/Documents and Settings/dhadley/Desktop/ElectionFourteen/")
+setwd("/Users/dphnrome/Documents/Git/MassElections")
 
 d <- read.csv("./rawData/votePercents.csv")
+
 
 library(plyr)
 library(ggplot2)
@@ -124,5 +125,14 @@ ggplot(long, aes(votes, fill = Candidate)) + geom_density(alpha = 0.5, colour="w
   scale_x_continuous(labels = percent)
 
 ggsave("./plots/plot04.png", dpi=300, width=5, height=3)
+
+
+#### Census + Crime + Voting Visualization ####
+# This brings in census data, which is a smaller sample, but more columns
+
+dma <- read.csv("./rawData/MassData.csv")
+
+dma$Municipality <- dma$Geography 
+d <- merge(dma, d, by="Municipality")
 
 
