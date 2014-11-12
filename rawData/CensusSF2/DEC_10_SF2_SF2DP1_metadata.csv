@@ -1,0 +1,247 @@
+GEO.id,Id
+GEO.id2,Id2
+GEO.display-label,Geography
+POPGROUP.id,Id
+POPGROUP.display-label,Population Group
+HD01_S001,Number; SEX AND AGE [1] - Total population
+HD02_S001,Percent; SEX AND AGE [1] - Total population
+HD01_S002,Number; SEX AND AGE [1] - Total population - Under 5 years
+HD02_S002,Percent; SEX AND AGE [1] - Total population - Under 5 years
+HD01_S003,Number; SEX AND AGE [1] - Total population - 5 to 9 years
+HD02_S003,Percent; SEX AND AGE [1] - Total population - 5 to 9 years
+HD01_S004,Number; SEX AND AGE [1] - Total population - 10 to 14 years
+HD02_S004,Percent; SEX AND AGE [1] - Total population - 10 to 14 years
+HD01_S005,Number; SEX AND AGE [1] - Total population - 15 to 19 years
+HD02_S005,Percent; SEX AND AGE [1] - Total population - 15 to 19 years
+HD01_S006,Number; SEX AND AGE [1] - Total population - 20 to 24 years
+HD02_S006,Percent; SEX AND AGE [1] - Total population - 20 to 24 years
+HD01_S007,Number; SEX AND AGE [1] - Total population - 25 to 29 years
+HD02_S007,Percent; SEX AND AGE [1] - Total population - 25 to 29 years
+HD01_S008,Number; SEX AND AGE [1] - Total population - 30 to 34 years
+HD02_S008,Percent; SEX AND AGE [1] - Total population - 30 to 34 years
+HD01_S009,Number; SEX AND AGE [1] - Total population - 35 to 39 years
+HD02_S009,Percent; SEX AND AGE [1] - Total population - 35 to 39 years
+HD01_S010,Number; SEX AND AGE [1] - Total population - 40 to 44 years
+HD02_S010,Percent; SEX AND AGE [1] - Total population - 40 to 44 years
+HD01_S011,Number; SEX AND AGE [1] - Total population - 45 to 49 years
+HD02_S011,Percent; SEX AND AGE [1] - Total population - 45 to 49 years
+HD01_S012,Number; SEX AND AGE [1] - Total population - 50 to 54 years
+HD02_S012,Percent; SEX AND AGE [1] - Total population - 50 to 54 years
+HD01_S013,Number; SEX AND AGE [1] - Total population - 55 to 59 years
+HD02_S013,Percent; SEX AND AGE [1] - Total population - 55 to 59 years
+HD01_S014,Number; SEX AND AGE [1] - Total population - 60 to 64 years
+HD02_S014,Percent; SEX AND AGE [1] - Total population - 60 to 64 years
+HD01_S015,Number; SEX AND AGE [1] - Total population - 65 to 69 years
+HD02_S015,Percent; SEX AND AGE [1] - Total population - 65 to 69 years
+HD01_S016,Number; SEX AND AGE [1] - Total population - 70 to 74 years
+HD02_S016,Percent; SEX AND AGE [1] - Total population - 70 to 74 years
+HD01_S017,Number; SEX AND AGE [1] - Total population - 75 to 79 years
+HD02_S017,Percent; SEX AND AGE [1] - Total population - 75 to 79 years
+HD01_S018,Number; SEX AND AGE [1] - Total population - 80 to 84 years
+HD02_S018,Percent; SEX AND AGE [1] - Total population - 80 to 84 years
+HD01_S019,Number; SEX AND AGE [1] - Total population - 85 years and over
+HD02_S019,Percent; SEX AND AGE [1] - Total population - 85 years and over
+HD01_S020,Number; SEX AND AGE [1] - Total population - Median age (years)
+HD02_S020,Percent; SEX AND AGE [1] - Total population - Median age (years)
+HD01_S021,Number; SEX AND AGE [1] - Total population - 16 years and over
+HD02_S021,Percent; SEX AND AGE [1] - Total population - 16 years and over
+HD01_S022,Number; SEX AND AGE [1] - Total population - 18 years and over
+HD02_S022,Percent; SEX AND AGE [1] - Total population - 18 years and over
+HD01_S023,Number; SEX AND AGE [1] - Total population - 21 years and over
+HD02_S023,Percent; SEX AND AGE [1] - Total population - 21 years and over
+HD01_S024,Number; SEX AND AGE [1] - Total population - 62 years and over
+HD02_S024,Percent; SEX AND AGE [1] - Total population - 62 years and over
+HD01_S025,Number; SEX AND AGE [1] - Total population - 65 years and over
+HD02_S025,Percent; SEX AND AGE [1] - Total population - 65 years and over
+HD01_S026,Number; SEX AND AGE [1] - Male population
+HD02_S026,Percent; SEX AND AGE [1] - Male population
+HD01_S027,Number; SEX AND AGE [1] - Male population - Under 5 years
+HD02_S027,Percent; SEX AND AGE [1] - Male population - Under 5 years
+HD01_S028,Number; SEX AND AGE [1] - Male population - 5 to 9 years
+HD02_S028,Percent; SEX AND AGE [1] - Male population - 5 to 9 years
+HD01_S029,Number; SEX AND AGE [1] - Male population - 10 to 14 years
+HD02_S029,Percent; SEX AND AGE [1] - Male population - 10 to 14 years
+HD01_S030,Number; SEX AND AGE [1] - Male population - 15 to 19 years
+HD02_S030,Percent; SEX AND AGE [1] - Male population - 15 to 19 years
+HD01_S031,Number; SEX AND AGE [1] - Male population - 20 to 24 years
+HD02_S031,Percent; SEX AND AGE [1] - Male population - 20 to 24 years
+HD01_S032,Number; SEX AND AGE [1] - Male population - 25 to 29 years
+HD02_S032,Percent; SEX AND AGE [1] - Male population - 25 to 29 years
+HD01_S033,Number; SEX AND AGE [1] - Male population - 30 to 34 years
+HD02_S033,Percent; SEX AND AGE [1] - Male population - 30 to 34 years
+HD01_S034,Number; SEX AND AGE [1] - Male population - 35 to 39 years
+HD02_S034,Percent; SEX AND AGE [1] - Male population - 35 to 39 years
+HD01_S035,Number; SEX AND AGE [1] - Male population - 40 to 44 years
+HD02_S035,Percent; SEX AND AGE [1] - Male population - 40 to 44 years
+HD01_S036,Number; SEX AND AGE [1] - Male population - 45 to 49 years
+HD02_S036,Percent; SEX AND AGE [1] - Male population - 45 to 49 years
+HD01_S037,Number; SEX AND AGE [1] - Male population - 50 to 54 years
+HD02_S037,Percent; SEX AND AGE [1] - Male population - 50 to 54 years
+HD01_S038,Number; SEX AND AGE [1] - Male population - 55 to 59 years
+HD02_S038,Percent; SEX AND AGE [1] - Male population - 55 to 59 years
+HD01_S039,Number; SEX AND AGE [1] - Male population - 60 to 64 years
+HD02_S039,Percent; SEX AND AGE [1] - Male population - 60 to 64 years
+HD01_S040,Number; SEX AND AGE [1] - Male population - 65 to 69 years
+HD02_S040,Percent; SEX AND AGE [1] - Male population - 65 to 69 years
+HD01_S041,Number; SEX AND AGE [1] - Male population - 70 to 74 years
+HD02_S041,Percent; SEX AND AGE [1] - Male population - 70 to 74 years
+HD01_S042,Number; SEX AND AGE [1] - Male population - 75 to 79 years
+HD02_S042,Percent; SEX AND AGE [1] - Male population - 75 to 79 years
+HD01_S043,Number; SEX AND AGE [1] - Male population - 80 to 84 years
+HD02_S043,Percent; SEX AND AGE [1] - Male population - 80 to 84 years
+HD01_S044,Number; SEX AND AGE [1] - Male population - 85 years and over
+HD02_S044,Percent; SEX AND AGE [1] - Male population - 85 years and over
+HD01_S045,Number; SEX AND AGE [1] - Male population - Median age (years)
+HD02_S045,Percent; SEX AND AGE [1] - Male population - Median age (years)
+HD01_S046,Number; SEX AND AGE [1] - Male population - 16 years and over
+HD02_S046,Percent; SEX AND AGE [1] - Male population - 16 years and over
+HD01_S047,Number; SEX AND AGE [1] - Male population - 18 years and over
+HD02_S047,Percent; SEX AND AGE [1] - Male population - 18 years and over
+HD01_S048,Number; SEX AND AGE [1] - Male population - 21 years and over
+HD02_S048,Percent; SEX AND AGE [1] - Male population - 21 years and over
+HD01_S049,Number; SEX AND AGE [1] - Male population - 62 years and over
+HD02_S049,Percent; SEX AND AGE [1] - Male population - 62 years and over
+HD01_S050,Number; SEX AND AGE [1] - Male population - 65 years and over
+HD02_S050,Percent; SEX AND AGE [1] - Male population - 65 years and over
+HD01_S051,Number; SEX AND AGE [1] - Female population
+HD02_S051,Percent; SEX AND AGE [1] - Female population
+HD01_S052,Number; SEX AND AGE [1] - Female population - Under 5 years
+HD02_S052,Percent; SEX AND AGE [1] - Female population - Under 5 years
+HD01_S053,Number; SEX AND AGE [1] - Female population - 5 to 9 years
+HD02_S053,Percent; SEX AND AGE [1] - Female population - 5 to 9 years
+HD01_S054,Number; SEX AND AGE [1] - Female population - 10 to 14 years
+HD02_S054,Percent; SEX AND AGE [1] - Female population - 10 to 14 years
+HD01_S055,Number; SEX AND AGE [1] - Female population - 15 to 19 years
+HD02_S055,Percent; SEX AND AGE [1] - Female population - 15 to 19 years
+HD01_S056,Number; SEX AND AGE [1] - Female population - 20 to 24 years
+HD02_S056,Percent; SEX AND AGE [1] - Female population - 20 to 24 years
+HD01_S057,Number; SEX AND AGE [1] - Female population - 25 to 29 years
+HD02_S057,Percent; SEX AND AGE [1] - Female population - 25 to 29 years
+HD01_S058,Number; SEX AND AGE [1] - Female population - 30 to 34 years
+HD02_S058,Percent; SEX AND AGE [1] - Female population - 30 to 34 years
+HD01_S059,Number; SEX AND AGE [1] - Female population - 35 to 39 years
+HD02_S059,Percent; SEX AND AGE [1] - Female population - 35 to 39 years
+HD01_S060,Number; SEX AND AGE [1] - Female population - 40 to 44 years
+HD02_S060,Percent; SEX AND AGE [1] - Female population - 40 to 44 years
+HD01_S061,Number; SEX AND AGE [1] - Female population - 45 to 49 years
+HD02_S061,Percent; SEX AND AGE [1] - Female population - 45 to 49 years
+HD01_S062,Number; SEX AND AGE [1] - Female population - 50 to 54 years
+HD02_S062,Percent; SEX AND AGE [1] - Female population - 50 to 54 years
+HD01_S063,Number; SEX AND AGE [1] - Female population - 55 to 59 years
+HD02_S063,Percent; SEX AND AGE [1] - Female population - 55 to 59 years
+HD01_S064,Number; SEX AND AGE [1] - Female population - 60 to 64 years
+HD02_S064,Percent; SEX AND AGE [1] - Female population - 60 to 64 years
+HD01_S065,Number; SEX AND AGE [1] - Female population - 65 to 69 years
+HD02_S065,Percent; SEX AND AGE [1] - Female population - 65 to 69 years
+HD01_S066,Number; SEX AND AGE [1] - Female population - 70 to 74 years
+HD02_S066,Percent; SEX AND AGE [1] - Female population - 70 to 74 years
+HD01_S067,Number; SEX AND AGE [1] - Female population - 75 to 79 years
+HD02_S067,Percent; SEX AND AGE [1] - Female population - 75 to 79 years
+HD01_S068,Number; SEX AND AGE [1] - Female population - 80 to 84 years
+HD02_S068,Percent; SEX AND AGE [1] - Female population - 80 to 84 years
+HD01_S069,Number; SEX AND AGE [1] - Female population - 85 years and over
+HD02_S069,Percent; SEX AND AGE [1] - Female population - 85 years and over
+HD01_S070,Number; SEX AND AGE [1] - Female population - Median age (years)
+HD02_S070,Percent; SEX AND AGE [1] - Female population - Median age (years)
+HD01_S071,Number; SEX AND AGE [1] - Female population - 16 years and over
+HD02_S071,Percent; SEX AND AGE [1] - Female population - 16 years and over
+HD01_S072,Number; SEX AND AGE [1] - Female population - 18 years and over
+HD02_S072,Percent; SEX AND AGE [1] - Female population - 18 years and over
+HD01_S073,Number; SEX AND AGE [1] - Female population - 21 years and over
+HD02_S073,Percent; SEX AND AGE [1] - Female population - 21 years and over
+HD01_S074,Number; SEX AND AGE [1] - Female population - 62 years and over
+HD02_S074,Percent; SEX AND AGE [1] - Female population - 62 years and over
+HD01_S075,Number; SEX AND AGE [1] - Female population - 65 years and over
+HD02_S075,Percent; SEX AND AGE [1] - Female population - 65 years and over
+HD01_S076,Number; RELATIONSHIP [1] - Total population
+HD02_S076,Percent; RELATIONSHIP [1] - Total population
+HD01_S077,Number; RELATIONSHIP [1] - Total population - In households
+HD02_S077,Percent; RELATIONSHIP [1] - Total population - In households
+HD01_S078,Number; RELATIONSHIP [1] - Total population - In households - Householder
+HD02_S078,Percent; RELATIONSHIP [1] - Total population - In households - Householder
+HD01_S079,Number; RELATIONSHIP [1] - Total population - In households - Spouse [2]
+HD02_S079,Percent; RELATIONSHIP [1] - Total population - In households - Spouse [2]
+HD01_S080,Number; RELATIONSHIP [1] - Total population - In households - Child
+HD02_S080,Percent; RELATIONSHIP [1] - Total population - In households - Child
+HD01_S081,Number; RELATIONSHIP [1] - Total population - In households - Child - Own child under 18 years
+HD02_S081,Percent; RELATIONSHIP [1] - Total population - In households - Child - Own child under 18 years
+HD01_S082,Number; RELATIONSHIP [1] - Total population - In households - Other relatives
+HD02_S082,Percent; RELATIONSHIP [1] - Total population - In households - Other relatives
+HD01_S083,Number; RELATIONSHIP [1] - Total population - In households - Other relatives - Under 18 years
+HD02_S083,Percent; RELATIONSHIP [1] - Total population - In households - Other relatives - Under 18 years
+HD01_S084,Number; RELATIONSHIP [1] - Total population - In households - Other relatives - 65 years and over
+HD02_S084,Percent; RELATIONSHIP [1] - Total population - In households - Other relatives - 65 years and over
+HD01_S085,Number; RELATIONSHIP [1] - Total population - In households - Nonrelatives
+HD02_S085,Percent; RELATIONSHIP [1] - Total population - In households - Nonrelatives
+HD01_S086,Number; RELATIONSHIP [1] - Total population - In households - Nonrelatives - Under 18 years
+HD02_S086,Percent; RELATIONSHIP [1] - Total population - In households - Nonrelatives - Under 18 years
+HD01_S087,Number; RELATIONSHIP [1] - Total population - In households - Nonrelatives - 65 years and over
+HD02_S087,Percent; RELATIONSHIP [1] - Total population - In households - Nonrelatives - 65 years and over
+HD01_S088,Number; RELATIONSHIP [1] - Total population - In households - Nonrelatives - Unmarried partner
+HD02_S088,Percent; RELATIONSHIP [1] - Total population - In households - Nonrelatives - Unmarried partner
+HD01_S089,Number; RELATIONSHIP [1] - Total population - In group quarters
+HD02_S089,Percent; RELATIONSHIP [1] - Total population - In group quarters
+HD01_S090,Number; RELATIONSHIP [1] - Total population - In group quarters - Institutionalized population
+HD02_S090,Percent; RELATIONSHIP [1] - Total population - In group quarters - Institutionalized population
+HD01_S091,Number; RELATIONSHIP [1] - Total population - In group quarters - Institutionalized population - Male
+HD02_S091,Percent; RELATIONSHIP [1] - Total population - In group quarters - Institutionalized population - Male
+HD01_S092,Number; RELATIONSHIP [1] - Total population - In group quarters - Institutionalized population - Female
+HD02_S092,Percent; RELATIONSHIP [1] - Total population - In group quarters - Institutionalized population - Female
+HD01_S093,Number; RELATIONSHIP [1] - Total population - In group quarters - Noninstitutionalized population
+HD02_S093,Percent; RELATIONSHIP [1] - Total population - In group quarters - Noninstitutionalized population
+HD01_S094,Number; RELATIONSHIP [1] - Total population - In group quarters - Noninstitutionalized population - Male
+HD02_S094,Percent; RELATIONSHIP [1] - Total population - In group quarters - Noninstitutionalized population - Male
+HD01_S095,Number; RELATIONSHIP [1] - Total population - In group quarters - Noninstitutionalized population - Female
+HD02_S095,Percent; RELATIONSHIP [1] - Total population - In group quarters - Noninstitutionalized population - Female
+HD01_S096,Number; HOUSEHOLDS BY TYPE [3] - Total households
+HD02_S096,Percent; HOUSEHOLDS BY TYPE [3] - Total households
+HD01_S097,Number; HOUSEHOLDS BY TYPE [3] - Total households - Family households (families) [4]
+HD02_S097,Percent; HOUSEHOLDS BY TYPE [3] - Total households - Family households (families) [4]
+HD01_S098,Number; HOUSEHOLDS BY TYPE [3] - Total households - Family households (families) [4] - With own children under 18 years
+HD02_S098,Percent; HOUSEHOLDS BY TYPE [3] - Total households - Family households (families) [4] - With own children under 18 years
+HD01_S099,Number; HOUSEHOLDS BY TYPE [3] - Total households - Family households (families) [4] - Husband-wife family
+HD02_S099,Percent; HOUSEHOLDS BY TYPE [3] - Total households - Family households (families) [4] - Husband-wife family
+HD01_S100,Number; HOUSEHOLDS BY TYPE [3] - Total households - Family households (families) [4] - Husband-wife family - With own children under 18 years
+HD02_S100,Percent; HOUSEHOLDS BY TYPE [3] - Total households - Family households (families) [4] - Husband-wife family - With own children under 18 years
+HD01_S101,"Number; HOUSEHOLDS BY TYPE [3] - Total households - Family households (families) [4] - Male householder, no wife present"
+HD02_S101,"Percent; HOUSEHOLDS BY TYPE [3] - Total households - Family households (families) [4] - Male householder, no wife present"
+HD01_S102,"Number; HOUSEHOLDS BY TYPE [3] - Total households - Family households (families) [4] - Male householder, no wife present - With own children under 18 years"
+HD02_S102,"Percent; HOUSEHOLDS BY TYPE [3] - Total households - Family households (families) [4] - Male householder, no wife present - With own children under 18 years"
+HD01_S103,"Number; HOUSEHOLDS BY TYPE [3] - Total households - Family households (families) [4] - Female householder, no husband present"
+HD02_S103,"Percent; HOUSEHOLDS BY TYPE [3] - Total households - Family households (families) [4] - Female householder, no husband present"
+HD01_S104,"Number; HOUSEHOLDS BY TYPE [3] - Total households - Family households (families) [4] - Female householder, no husband present - With own children under 18 years"
+HD02_S104,"Percent; HOUSEHOLDS BY TYPE [3] - Total households - Family households (families) [4] - Female householder, no husband present - With own children under 18 years"
+HD01_S105,Number; HOUSEHOLDS BY TYPE [3] - Total households - Nonfamily households [4]
+HD02_S105,Percent; HOUSEHOLDS BY TYPE [3] - Total households - Nonfamily households [4]
+HD01_S106,Number; HOUSEHOLDS BY TYPE [3] - Total households - Nonfamily households [4] - Householder living alone
+HD02_S106,Percent; HOUSEHOLDS BY TYPE [3] - Total households - Nonfamily households [4] - Householder living alone
+HD01_S107,Number; HOUSEHOLDS BY TYPE [3] - Total households - Nonfamily households [4] - Householder living alone - Male
+HD02_S107,Percent; HOUSEHOLDS BY TYPE [3] - Total households - Nonfamily households [4] - Householder living alone - Male
+HD01_S108,Number; HOUSEHOLDS BY TYPE [3] - Total households - Nonfamily households [4] - Householder living alone - Male - 65 years and over
+HD02_S108,Percent; HOUSEHOLDS BY TYPE [3] - Total households - Nonfamily households [4] - Householder living alone - Male - 65 years and over
+HD01_S109,Number; HOUSEHOLDS BY TYPE [3] - Total households - Nonfamily households [4] - Householder living alone - Female
+HD02_S109,Percent; HOUSEHOLDS BY TYPE [3] - Total households - Nonfamily households [4] - Householder living alone - Female
+HD01_S110,Number; HOUSEHOLDS BY TYPE [3] - Total households - Nonfamily households [4] - Householder living alone - Female - 65 years and over
+HD02_S110,Percent; HOUSEHOLDS BY TYPE [3] - Total households - Nonfamily households [4] - Householder living alone - Female - 65 years and over
+HD01_S111,Number; HOUSEHOLDS BY TYPE [3] - Total households - Households with individuals under 18 years
+HD02_S111,Percent; HOUSEHOLDS BY TYPE [3] - Total households - Households with individuals under 18 years
+HD01_S112,Number; HOUSEHOLDS BY TYPE [3] - Total households - Households with individuals 65 years and over
+HD02_S112,Percent; HOUSEHOLDS BY TYPE [3] - Total households - Households with individuals 65 years and over
+HD01_S113,Number; HOUSEHOLDS BY TYPE [3] - Total households - Average household size
+HD02_S113,Percent; HOUSEHOLDS BY TYPE [3] - Total households - Average household size
+HD01_S114,Number; HOUSEHOLDS BY TYPE [3] - Total households - Average family size
+HD02_S114,Percent; HOUSEHOLDS BY TYPE [3] - Total households - Average family size
+HD01_S115,Number; HOUSING TENURE [3] - Occupied housing units
+HD02_S115,Percent; HOUSING TENURE [3] - Occupied housing units
+HD01_S116,Number; HOUSING TENURE [3] - Occupied housing units - Owner-occupied housing units
+HD02_S116,Percent; HOUSING TENURE [3] - Occupied housing units - Owner-occupied housing units
+HD01_S117,Number; HOUSING TENURE [3] - Occupied housing units - Owner-occupied housing units - Population in owner-occupied housing units
+HD02_S117,Percent; HOUSING TENURE [3] - Occupied housing units - Owner-occupied housing units - Population in owner-occupied housing units
+HD01_S118,Number; HOUSING TENURE [3] - Occupied housing units - Owner-occupied housing units - Average household size of owner-occupied units
+HD02_S118,Percent; HOUSING TENURE [3] - Occupied housing units - Owner-occupied housing units - Average household size of owner-occupied units
+HD01_S119,Number; HOUSING TENURE [3] - Occupied housing units - Renter-occupied housing units
+HD02_S119,Percent; HOUSING TENURE [3] - Occupied housing units - Renter-occupied housing units
+HD01_S120,Number; HOUSING TENURE [3] - Occupied housing units - Renter-occupied housing units - Population in renter-occupied housing units
+HD02_S120,Percent; HOUSING TENURE [3] - Occupied housing units - Renter-occupied housing units - Population in renter-occupied housing units
+HD01_S121,Number; HOUSING TENURE [3] - Occupied housing units - Renter-occupied housing units - Average household size of renter-occupied units
+HD02_S121,Percent; HOUSING TENURE [3] - Occupied housing units - Renter-occupied housing units - Average household size of renter-occupied units

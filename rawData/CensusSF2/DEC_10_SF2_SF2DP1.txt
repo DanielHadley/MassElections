@@ -1,0 +1,13 @@
+DP-1
+Profile of General Population and Housing Characteristics: 2010
+
+Note: This is a modified view of the original table.
+
+NOTE: For information on confidentiality protection, nonsampling error, and definitions, see  http://www.census.gov/prod/cen2010/doc/sf2.pdf.Summary File 2 has a population threshold of 100.  Data are available only for the population groups having a population of 100 or more of that specific group within a particular geographic area. 
+
+X Not applicable.[1] When a category other than Total Population is selected, all persons in the household are classified by the race, Hispanic or Latino origin, or tribe/tribal grouping of the person.[2] "Spouse" represents spouse of the householder. It does not reflect all spouses in a household. Responses of "same-sex spouse" were edited during processing to "unmarried partner."[3] When a category other than Total Population is selected, all persons in the household are classified by the race, Hispanic or Latino origin, or tribe/tribal grouping of the householder.[4] "Family households" consist of a householder and one or more other people related to the householder by birth, marriage, or adoption. They do not include same-sex married couples even if the marriage was performed in a state issuing marriage certificates for same-sex couples. Same-sex couple households are included in the family households category if there is at least one additional person related to the householder by birth or adoption. Same-sex couple households with no relatives of the householder present are tabulated in nonfamily households. "Nonfamily households" consist of people living alone and households which do not have any members related to the householder.[5] As part of the release of Summary File 2 (SF2) data, the Census Bureau released quick-table DP-1 for 38 states between December 15, 2011 and April 5, 2012. Some of the data cells in these tables were found to be erroneous (the male institutionalized population count and percentage).  The tables were removed on April 9, 2012, and the data cells were corrected and re-released on April 26, 2012. 
+
+Source: U.S. Census Bureau, 2010 Census.
+
+Summary File 2,  Tables PCT3, PCT4, PCT7, PCT9, PCT10, PCT15, PCT18, PCT22, PCT24, PCT28, PCT31, PCT32, PCT36, PCT37, PCT39, HCT2, HCT4, HCT5, and HCT7.
+

@@ -161,8 +161,113 @@ ggplot(Baker, aes(x=POP2010, y=Baker, color=WhichGov)) +
 ggsave("./plots/plot08.png", dpi=300, width=5, height=5)
 
 
-#### Census + Crime + Voting Visualization ####
-# This brings in census data, which is a smaller sample, but more columns
+#### Add Raw Counts and 2012 data ####
+
+# Raw counts
+dRaw <- read.csv("./rawData/voteCounts.csv")
+d <- merge(d, dRaw, by="Municipality")
+
+d10 <- read.csv("./rawData/PD43__2010_Governor_General_Election.csv")
+d10 <- d10[-352,]
+d10 <- d10[ -c(2:3) ]
+d10$City.Town <- gsub("E[.]", "East", d10$City.Town)
+d10$City.Town <- gsub("N[.]", "North",d10$City.Town)
+d10$City.Town <- gsub("W[.]", "West", d10$City.Town)
+d10$City.Town <- gsub("S[.]", "South", d10$City.Town)
+d10$City.Town <- gsub("Manchester-by-the-Sea", "Manchester", d10$City.Town)
+
+
+d <- merge(d, d10, by.x="TOWN2", by.y="City.Town")
+
+
+d$BakerAdds <- d$Baker.y - d$Baker..Tisei
+d.top <- d[order(-d$BakerAdds),]
+d.top <- d.top[-c(11:351),]
+ggplot(d.top, aes(x=reorder(d.top$Municipality, -d.top$BakerAdds), y=d.top$BakerAdds)) + geom_bar(colour="white", fill=pinkish_red) + 
+  my.theme + ggtitle("Places Where Baker Picked up the Most New Votes") + xlab("Municipality")+ylab("New Votes for Baker Since 2010") + 
+  scale_y_continuous(labels = comma)### Automatic Maps ####### Automatic Maps ####
+
+ggsave("./plots/plot09.png", dpi=300, width=5, height=3)
+
+
+# Turn all raw counts from 2010 into a percent
+d <- data.frame(d[,1:61], lapply(d[,62:67], function(X) X/d$Total.Votes.Cast))
+d$BakerIncrease <- d$Baker.x - d$Baker..Tisei
+
+d.top <- d[order(-d$BakerIncrease),]
+d.top <- d.top[-c(11:351),]
+ggplot(d.top, aes(x=reorder(d.top$Municipality, -d.top$BakerIncrease), y=d.top$BakerIncrease)) + geom_bar(colour="white", fill=pinkish_red) + 
+  my.theme + ggtitle("Places Where Baker Picked up the Largest % Increase") + xlab("Municipality")+ylab("% Increase in Votes for Baker Since 2010") + 
+  scale_y_continuous(labels = percent)
+
+ggsave("./plots/plot10.png", dpi=300, width=5, height=3)
+
+
+d.top <- d[order(d$BakerIncrease),]
+d.top <- d.top[-c(11:351),]
+ggplot(d.top, aes(x=reorder(d.top$Municipality, d.top$BakerIncrease), y=d.top$BakerIncrease)) + geom_bar(colour="white", fill=nice_blue) + 
+  my.theme + ggtitle("Places Where Baker Picked up the Smallest % Increase") + xlab("Municipality")+ylab("% Increase in Votes for Baker Since 2010") + 
+  scale_y_continuous(labels = percent)
+
+ggsave("./plots/plot11.png", dpi=300, width=5, height=3)
+
+
+# Need a map of this
+mass.df <- merge(mass.df, d, by="TOWN")
+
+# Map
+map <- get_map(location = "Grafton, Massachusetts", zoom=8, maptype="roadmap", color = "bw")
+ggmap(map)
+
+ggmap(map) +
+  geom_polygon(data=mass.df, aes(x=long, y=lat, group=group, fill=mass.df$BakerIncrease), colour=NA, alpha=0.7) +
+  scale_fill_gradientn(colours=(brewer.pal(9,"YlGnBu")),labels=percent) +
+  labs(fill="") +
+  theme_nothing(legend=TRUE) + ggtitle("Increase in % of Votes for Baker")
+
+ggsave(paste("./plots/plot12.png"), dpi=300, width=6, height=5)
+
+
+
+
+
+#### Census  + Voting Visualization ####
+# This brings in census data
+
+sf1 <- read.csv("./rawData/CensusSF1/DEC_10_SF1_SF1DP1_with_ann.csv")
+TenCensusSF1$Geography <- gsub(" Town city, Massachusetts", "", TenCensusSF1$Geography)
+TenCensusSF1$Geography <- gsub(" city, Massachusetts", "", TenCensusSF1$Geography)
+TenCensusSF1$Geography <- gsub(" Center", "", TenCensusSF1$Geography)
+sf1$Municipality <- cities <- gsub("^(.*?),.*", "\\1", sf1$GEO.display.label)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 dma <- read.csv("./rawData/MassData.csv")
 
