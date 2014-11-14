@@ -425,8 +425,8 @@ ggsave("./plots/plot23.png", dpi=300, width=5, height=4)
 d.top <- d[order(-d$Coakley.y),]
 d.top <- d.top[-c(16:351),]
 ggplot(d.top, aes(x=reorder(d.top$Municipality, -d.top$Coakley.y), y=d.top$Coakley.y)) + geom_bar(colour="white", fill=nice_blue) + 
-  my.theme + ggtitle("Places W/ the Most Raw Votes for Baker") + 
-  xlab("Municipality") + ylab("Votes for Baker") + 
+  my.theme + ggtitle("Places W/ the Most Raw Votes for Coakley") + 
+  xlab("Municipality") + ylab("Votes for Coakley") + 
   scale_y_continuous(labels = comma)
 
 ggsave("./plots/plot24.png", dpi=300, width=5, height=4)
