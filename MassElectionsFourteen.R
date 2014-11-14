@@ -91,14 +91,14 @@ ggplot(d, aes(x=d$Baker)) + geom_histogram(binwidth=.03, colour="white", fill=pi
   my.theme + ggtitle("Votes for Baker") + xlab("Percent of City/Town's Vote")+ylab("Number of Cities/Towns") + 
   scale_x_continuous(labels = percent)
 
-ggsave("./plots/plot01.png", dpi=300, width=5, height=3)
+ggsave("./plots/plot01.png", dpi=300, width=5, height=4)
 
 
 ggplot(d, aes(x=d$Coakley)) + geom_histogram(binwidth=.03, colour="white", fill=nice_blue) + 
   my.theme + ggtitle("Votes for Coakley") + xlab("Percent of City/Town's Vote")+ylab("Number of Cities/Towns") + 
   scale_x_continuous(labels = percent)
 
-ggsave("./plots/plot02.png", dpi=300, width=5, height=3)
+ggsave("./plots/plot02.png", dpi=300, width=5, height=4)
 
 
 mass.df.top <- mass.df[which(mass.df$POP2010 > 70000),]
@@ -107,7 +107,7 @@ ggplot(mass.df.top, aes(x=reorder(mass.df.top$TOWN, -mass.df.top$Coakley), y=mas
   my.theme + ggtitle("Votes for Coakley in Cities > 70k pop.") + xlab("Cities")+ylab("Percent of City/Town's Vote") + 
   scale_y_continuous(labels = percent)
 
-ggsave("./plots/plot03.png", dpi=300, width=5, height=3)
+ggsave("./plots/plot03.png", dpi=300, width=5, height=4)
 
 
 Coakley <- as.data.frame(d$Coakley)
@@ -124,14 +124,14 @@ ggplot(long, aes(votes, fill = Candidate)) + geom_density(alpha = 0.5, colour="w
   my.theme + ggtitle("Votes for Baker v Coakley") + xlab("Percent of City/Town's Vote")+ylab("Density") + 
   scale_x_continuous(labels = percent)
 
-ggsave("./plots/plot04.png", dpi=300, width=5, height=3)
+ggsave("./plots/plot04.png", dpi=300, width=5, height=4)
 
 
 ggplot(d, aes(x=d$Coakley, weight=d$POP2010)) + geom_histogram(binwidth=.03, colour="white", fill=nice_blue) + 
   my.theme + ggtitle("Votes for Coakley") + xlab("Percent of City/Town's Vote")+ylab("Sum Population of Places in This Bin") + 
   scale_x_continuous(labels = percent) + scale_y_continuous(labels = comma)
 
-ggsave("./plots/plot05.png", dpi=300, width=5, height=3)
+ggsave("./plots/plot05.png", dpi=300, width=5, height=4)
 
 
 CitiesForBaker <- d[which(d$POP2010 > 40000 & d$Baker > .5),]
@@ -140,7 +140,7 @@ ggplot(CitiesForBaker, aes(x=reorder(CitiesForBaker$TOWN, -CitiesForBaker$Baker)
   my.theme + ggtitle("Cities for Baker: the Most Populous Places") + xlab("Cities")+ylab("Percent of City/Town's Vote for Baker") + 
   scale_y_continuous(labels = percent)
 
-ggsave("./plots/plot06.png", dpi=300, width=5, height=3)
+ggsave("./plots/plot06.png", dpi=300, width=5, height=4)
 
 
 ggplot(d, aes(x=POP2010, y=d$Coakley, color=WhichGov)) +
@@ -184,10 +184,10 @@ d$BakerAdds <- d$Baker.y - d$Baker..Tisei
 d.top <- d[order(-d$BakerAdds),]
 d.top <- d.top[-c(11:351),]
 ggplot(d.top, aes(x=reorder(d.top$Municipality, -d.top$BakerAdds), y=d.top$BakerAdds)) + geom_bar(colour="white", fill=pinkish_red) + 
-  my.theme + ggtitle("Places Where Baker Picked up the Most New Votes") + xlab("Municipality")+ylab("New Votes for Baker Since 2010") + 
+  my.theme + ggtitle("Largest Increase for Baker - Raw Votes") + xlab("Municipality")+ylab("Increase in Votes for Baker Since 2010") + 
   scale_y_continuous(labels = comma)### Automatic Maps ####### Automatic Maps ####
 
-ggsave("./plots/plot09.png", dpi=300, width=5, height=3)
+ggsave("./plots/plot09.png", dpi=300, width=5, height=4)
 
 
 # Turn all raw counts from 2010 into a percent
@@ -197,22 +197,26 @@ d$BakerIncrease <- d$Baker.x - d$Baker..Tisei
 d.top <- d[order(-d$BakerIncrease),]
 d.top <- d.top[-c(11:351),]
 ggplot(d.top, aes(x=reorder(d.top$Municipality, -d.top$BakerIncrease), y=d.top$BakerIncrease)) + geom_bar(colour="white", fill=pinkish_red) + 
-  my.theme + ggtitle("Places Where Baker Picked up the Largest % Increase") + xlab("Municipality")+ylab("% Increase in Votes for Baker Since 2010") + 
+  my.theme + ggtitle("Largest Increase for Baker - Percentage Points") + xlab("Municipality")+ylab("Increase in Votes for Baker Since 2010") + 
   scale_y_continuous(labels = percent)
 
-ggsave("./plots/plot10.png", dpi=300, width=5, height=3)
+ggsave("./plots/plot10.png", dpi=300, width=5, height=4)
 
 
 d.top <- d[order(d$BakerIncrease),]
 d.top <- d.top[-c(11:351),]
 ggplot(d.top, aes(x=reorder(d.top$Municipality, d.top$BakerIncrease), y=d.top$BakerIncrease)) + geom_bar(colour="white", fill=nice_blue) + 
-  my.theme + ggtitle("Places Where Baker Picked up the Smallest % Increase") + xlab("Municipality")+ylab("% Increase in Votes for Baker Since 2010") + 
+  my.theme + ggtitle("Smallest Increase for Baker - Percentage Points") + xlab("Municipality")+ylab("Increase in Votes for Baker Since 2010") + 
   scale_y_continuous(labels = percent)
 
-ggsave("./plots/plot11.png", dpi=300, width=5, height=3)
+ggsave("./plots/plot11.png", dpi=300, width=5, height=4)
 
 
 # Need a map of this
+# First a calulation of Independents for 2nd map below
+d$Independents <- (abs(d$Baker.x - d$Coakley.x))*-1 + 
+  (mean(d$Falchuk.x, d$Lively.x, d$McCormick.x, d$"Cahill..Loscocco, d$Stein..Purcell", na.rm=T, trim=0))
+
 mass.df <- merge(mass.df, d, by="TOWN")
 
 # Map
@@ -221,83 +225,252 @@ ggmap(map)
 
 ggmap(map) +
   geom_polygon(data=mass.df, aes(x=long, y=lat, group=group, fill=mass.df$BakerIncrease), colour=NA, alpha=0.7) +
-  scale_fill_gradientn(colours=(brewer.pal(9,"YlGnBu")),labels=percent) +
+  scale_fill_gradientn(colours=(brewer.pal(9,"Reds")),labels=percent) +
   labs(fill="") +
-  theme_nothing(legend=TRUE) + ggtitle("Increase in % of Votes for Baker")
+  theme_nothing(legend=TRUE) + ggtitle("Increase for Baker - Percentage Points")
 
 ggsave(paste("./plots/plot12.png"), dpi=300, width=6, height=5)
 
 
+# One more map of independents
 
+ggmap(map) +
+  geom_polygon(data=mass.df, aes(x=long, y=lat, group=group, fill=mass.df$Independents), colour=NA, alpha=0.7) +
+  scale_fill_gradientn(colours=(brewer.pal(9,"Purples")),labels=percent) +
+  labs(fill="") +
+  theme_nothing(legend=TRUE) + ggtitle("Measure of Independent Voters")
+
+ggsave(paste("./plots/plot13.png"), dpi=300, width=6, height=5)
+
+d.top <- d[order(-d$Independents),]
+d.top <- d.top[-c(16:351),]
+ggplot(d.top, aes(x=reorder(d.top$Municipality, -d.top$POP2010), y=d.top$POP2010)) + geom_bar(colour="white", fill=purple) + 
+  my.theme + ggtitle("Places W/ the Most Independent Voters - by Population") + 
+  xlab("Municipality") + ylab("Population") + 
+  scale_y_continuous(labels = comma)
+
+ggsave("./plots/plot14.png", dpi=300, width=5, height=4)
+
+
+d.top <- d[order(d$Independents),]
+d.top <- d.top[which(d.top$WhichGov == "Coakley"),]
+d.top <- d.top[-c(16:351),]
+ggplot(d.top, aes(x=reorder(d.top$Municipality, -d.top$POP2010), y=d.top$POP2010)) + geom_bar(colour="white", fill=nice_blue) + 
+  my.theme + ggtitle("Places W/ the Most Partisan Voters - Democrat") + 
+  xlab("Municipality") + ylab("Population") + 
+  scale_y_continuous(labels = comma)
+
+ggsave("./plots/plot15.png", dpi=300, width=5, height=4)
+
+
+d.top <- d[order(d$Independents),]
+d.top <- d.top[which(d.top$WhichGov == "Baker"),]
+d.top <- d.top[-c(16:351),]
+ggplot(d.top, aes(x=reorder(d.top$Municipality, -d.top$POP2010), y=d.top$POP2010)) + geom_bar(colour="white", fill=pinkish_red) + 
+  my.theme + ggtitle("Places W/ the Most Partisan Voters - Republican") + 
+  xlab("Municipality") + ylab("Population") + 
+  scale_y_continuous(labels = comma)
+
+ggsave("./plots/plot16.png", dpi=300, width=5, height=4)
 
 
 #### Census  + Voting Visualization ####
 # This brings in census data
 
-sf1 <- read.csv("./rawData/CensusSF1/DEC_10_SF1_SF1DP1_with_ann.csv")
-TenCensusSF1$Geography <- gsub(" Town city, Massachusetts", "", TenCensusSF1$Geography)
-TenCensusSF1$Geography <- gsub(" city, Massachusetts", "", TenCensusSF1$Geography)
-TenCensusSF1$Geography <- gsub(" Center", "", TenCensusSF1$Geography)
-sf1$Municipality <- cities <- gsub("^(.*?),.*", "\\1", sf1$GEO.display.label)
+sf1 <- read.csv("./rawData/CensusSF1/DEC_10_SF1_SF1DP1_with_ann.csv", header=T, skip=1, stringsAsFactors=FALSE)
+sf1$Geography <- gsub(" Town city", "", sf1$Geography)
+sf1$Geography <- gsub(" town", "", sf1$Geography)
+sf1$Geography <- gsub(" Center", "", sf1$Geography)
+sf1$Geography <- gsub(" city", "", sf1$Geography)
+sf1$Geography <- sub("[,] .*", "", sf1$Geography)
+
+sf1[sf1=="(X)"]<-NA
+
+sf1$Municipality <- sf1$Geography
+
+dsf <- merge(d, sf1, by="Municipality")
+
+# Convert to numeric
+dsf[,74:444] <- as.numeric(unlist(dsf[,74:444]))
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-dma <- read.csv("./rawData/MassData.csv")
-
-dma$Municipality <- dma$Geography 
-dma <- merge(dma, d, by="Municipality")
-
-
-
-ggplot(dma, aes(x=percent.college.or.grad.school, y=Baker)) +
-  geom_point(shape=1, color = pinkish_red) + geom_smooth(method=lm, color = "grey") +
-  my.theme + ggtitle("Education/Baker") + xlab("Percent Currently Attending College+Grad?")+ylab("Percent of City/Town's Vote for Baker") +
-  annotate("text", x=94, y=.18, label="Amherst", size=2)
-
-ggsave("./plots/plot09.png", dpi=300, width=5, height=3)
-
-
-
-ggplot(dma, aes(x=dma$percent.bachelor.s.degree.or.higher, y=Baker, color = WhichGov)) +
-  geom_point(shape=1) + geom_smooth(method=lm, color = "grey") +
+summary(lm(dsf[,342] ~ dsf$Baker.x))$r.squared 
+ggplot(dsf, aes(x=dsf[,342], 
+                y=dsf$Baker.x, color=WhichGov)) +
+  geom_point(shape=1) + #scale_x_log10() +
+  geom_smooth(method=lm, color = "grey") +
   scale_color_manual(values = c(pinkish_red, nice_blue, purple)) +
-  my.theme + ggtitle("Education/Baker") + xlab("Percent Bachelors or Higher")+ylab("Percent of City/Town's Vote for Baker") 
+  my.theme + ggtitle("Families For Baker") + xlab("Percent of City/Town With Children - R-Sq=.33")+
+  ylab("Percent of City/Town's Vote for Baker") +
+  scale_y_continuous(labels = percent)
 
-ggsave("./plots/plot10.png", dpi=300, width=5, height=3)
+ggsave("./plots/plot17.png", dpi=300, width=5, height=4)
 
 
-ggplot(dma, aes(x=dma$graduate.or.professional.degree, y=Baker, color = WhichGov)) +
-  geom_point(shape=1) + geom_smooth(method=lm, color = "grey") +
+summary(lm(dsf[,228] ~ dsf$Baker.x))$r.squared 
+ggplot(dsf, aes(x=dsf[,228], 
+                y=dsf$Baker.x, color=WhichGov)) +
+  geom_point(shape=1) + #scale_x_log10() +
+  geom_smooth(method=lm, color = "grey") +
   scale_color_manual(values = c(pinkish_red, nice_blue, purple)) +
-  my.theme + ggtitle("Education/Baker") + xlab("Professional Degree or Higher")+ylab("Percent of City/Town's Vote for Baker") 
+  my.theme + ggtitle("Race/Baker") + xlab("Percent of City/Town White - R-Sq=.07")+
+  ylab("Percent of City/Town's Vote for Baker") +
+  scale_y_continuous(labels = percent)
 
-ggsave("./plots/plot11.png", dpi=300, width=5, height=3)
+ggsave("./plots/plot18.png", dpi=300, width=5, height=4)
+
+
+
+sf4 <- read.csv("./rawData/CensusSF4/ACS_10_SF4_DP02_with_ann.csv", header=T, skip=1, stringsAsFactors=FALSE)
+sf4$Geography <- gsub(" Town city", "", sf4$Geography)
+sf4$Geography <- gsub(" town", "", sf4$Geography)
+sf4$Geography <- gsub(" Center", "", sf4$Geography)
+sf4$Geography <- gsub(" city", "", sf4$Geography)
+sf4$Geography <- sub("[,] .*", "", sf4$Geography)
+
+sf4[sf4=="(X)"]<-NA
+
+sf4$Municipality <- sf4$Geography
+
+dsf <- merge(d, sf4, by="Municipality")
+
+# Convert to numeric
+dsf[,74:603] <- as.numeric(unlist(dsf[,74:603]))
+
+
+summary(lm(dsf[,341] ~ dsf$Baker.x))$r.squared 
+ggplot(dsf, aes(x=dsf[,341], 
+                y=dsf$Baker.x, color=WhichGov)) +
+  geom_point(shape=1) + #scale_x_log10() +
+  geom_smooth(method=lm, color = "grey") +
+  scale_color_manual(values = c(pinkish_red, nice_blue, purple)) +
+  my.theme + ggtitle("Education Not Correlated") + xlab("Percent of City/Town With Bachelor's or Higher")+
+  ylab("Percent of City/Town's Vote for Baker") +
+  scale_y_continuous(labels = percent)
+
+ggsave("./plots/plot19.png", dpi=300, width=5, height=4)
+
+
+dp3 <- read.csv("./rawData/CensusDP3/ACS_10_5YR_DP03_with_ann.csv", header=T, skip=1, stringsAsFactors=FALSE)
+dp3$Geography <- gsub(" Town city", "", dp3$Geography)
+dp3$Geography <- gsub(" town", "", dp3$Geography)
+dp3$Geography <- gsub(" Center", "", dp3$Geography)
+dp3$Geography <- gsub(" city", "", dp3$Geography)
+dp3$Geography <- sub("[,] .*", "", dp3$Geography)
+
+dp3[dp3=="(X)"]<-NA
+
+dp3$Municipality <- dp3$Geography
+
+dsf <- merge(d, dp3, by="Municipality")
+
+# Convert to numeric
+dsf[,74:620] <- as.numeric(unlist(dsf[,74:620]))
+
+summary(lm(dsf[,317] ~ dsf$Baker.x))$r.squared 
+ggplot(dsf, aes(x=dsf[,317], 
+                y=dsf$Baker.x, color=WhichGov)) +
+  geom_point(shape=1) + #scale_x_log10() +
+  geom_smooth(method=lm, color = "grey") +
+  scale_color_manual(values = c(pinkish_red, nice_blue, purple)) +
+  my.theme + ggtitle("Income Slightly Correlated") + xlab("Median Income, 2010 - R-Squared: .18")+
+  ylab("Percent of City/Town's Vote for Baker") +
+  scale_y_continuous(labels = percent) + scale_x_continuous(labels = dollar)
+
+ggsave("./plots/plot20.png", dpi=300, width=5, height=4)
+
+
+
+summary(lm(dsf[,147] ~ dsf$YesQ1.x))$r.squared 
+ggplot(dsf, aes(x=dsf[,147], 
+                y=dsf$YesQ1.x, color=WhichGov)) +
+  geom_point(shape=1) + #scale_x_log10() +
+  geom_smooth(method=lm, color = "grey") +
+  scale_color_manual(values = c(pinkish_red, nice_blue, purple)) +
+  my.theme + ggtitle("Commute / Vote on Q1") + xlab("Percent Commuting by Car Alone - R-Squared: .27")+
+  ylab("Percent of City/Town's Vote for Q1") +
+  scale_y_continuous(labels = percent)
+
+ggsave("./plots/plot21.png", dpi=300, width=5, height=4)
+
+
+summary(lm(dsf[,147] ~ dsf$Baker.x))$r.squared 
+ggplot(dsf, aes(x=dsf[,147], 
+                y=dsf$Baker.x, color=WhichGov)) +
+  geom_point(shape=1) + #scale_x_log10() +
+  geom_smooth(method=lm, color = "grey") +
+  scale_color_manual(values = c(pinkish_red, nice_blue, purple)) +
+  my.theme + ggtitle("Commute / Vote For Baker") + xlab("Percent Commuting by Car Alone - R-Squared: .27")+
+  ylab("Percent of City/Town's Vote for Baker") +
+  scale_y_continuous(labels = percent)
+
+ggsave("./plots/plot22.png", dpi=300, width=5, height=4)
+
+
+
+
+#### Just a few more ####
+
+d.top <- d[order(-d$Baker.y),]
+d.top <- d.top[-c(16:351),]
+ggplot(d.top, aes(x=reorder(d.top$Municipality, -d.top$Baker.y), y=d.top$Baker.y)) + geom_bar(colour="white", fill=pinkish_red) + 
+  my.theme + ggtitle("Places W/ the Most Raw Votes for Baker") + 
+  xlab("Municipality") + ylab("Votes for Baker") + 
+  scale_y_continuous(labels = comma)
+
+ggsave("./plots/plot23.png", dpi=300, width=5, height=4)
+
+
+d.top <- d[order(-d$Coakley.y),]
+d.top <- d.top[-c(16:351),]
+ggplot(d.top, aes(x=reorder(d.top$Municipality, -d.top$Coakley.y), y=d.top$Coakley.y)) + geom_bar(colour="white", fill=nice_blue) + 
+  my.theme + ggtitle("Places W/ the Most Raw Votes for Baker") + 
+  xlab("Municipality") + ylab("Votes for Baker") + 
+  scale_y_continuous(labels = comma)
+
+ggsave("./plots/plot24.png", dpi=300, width=5, height=4)
+
+
+# Map
+map <- get_map(location = "Boston, Massachusetts", zoom=11, maptype="roadmap", color = "bw")
+ggmap(map)
+
+ggmap(map) +
+  geom_polygon(data=mass.df, aes(x=long, y=lat, group=group, fill=mass.df$BakerIncrease), colour=NA, alpha=0.7) +
+  scale_fill_gradientn(colours=(brewer.pal(9,"Reds")),labels=percent) +
+  labs(fill="") +
+  theme_nothing(legend=TRUE) + ggtitle("Increase for Baker - Percentage Points")
+
+ggsave(paste("./plots/plot25.png"), dpi=300, width=6, height=5)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
